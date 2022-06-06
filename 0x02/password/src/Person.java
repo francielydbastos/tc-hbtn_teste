@@ -17,6 +17,6 @@ public class Person {
     public boolean checkPassword() {
         boolean isValid = false;
 
-        return this.password.matches(".*[A-Z].*") && this.password.matches(".*[0-9].*") && this.password.matches(".*[-+_!@#$%^&*.,?].*") && this.password.length() >= 8;
+        return this.password.matches(".*[A-Z].*") && this.password.matches(".*[0-9].*") && this.password.matches(".*[^a-zA-Z0-9].*") && this.password.length() >= 8;
     }
 }
